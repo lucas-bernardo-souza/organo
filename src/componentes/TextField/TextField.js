@@ -1,6 +1,6 @@
- import './CampoTexto.css'
+ import './TextField.css'
 
- export const CampoTexto = (props) => {
+ export const TextField = (props) => {
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
