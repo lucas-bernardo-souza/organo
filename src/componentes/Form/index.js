@@ -4,7 +4,7 @@ import TextField from '../TextField'
 import List from '../List'
 import Button from '../Button'
 
-const Form = () =>{
+const Form = (props) =>{
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -23,7 +23,12 @@ const Form = () =>{
 
     const submit = (event) => {
         event.preventDefault()
-        console.log("Form submetido => ", nome, cargo, imagem, time)
+        props.registeredEmployee({
+            nome: nome,
+            cargo: cargo,
+            imagem: imagem,
+            time: time
+        })
     }
 
     return (
