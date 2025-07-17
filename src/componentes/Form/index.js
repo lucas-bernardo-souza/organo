@@ -19,6 +19,10 @@ const Form = (props) =>{
             imagem: imagem,
             time: time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+
     }
 
     return (
