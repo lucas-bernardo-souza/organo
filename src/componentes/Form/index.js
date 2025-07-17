@@ -11,16 +11,6 @@ const Form = (props) =>{
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data-Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const submit = (event) => {
         event.preventDefault()
         props.registeredEmployee({
@@ -57,7 +47,7 @@ const Form = (props) =>{
                 />
                 <List 
                     required={true} 
-                    label="Times" itens={times}
+                    label="Times" itens={props.teams}
                     value={time}
                     changed={value => setTime(value)}
                 />

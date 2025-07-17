@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Banner></Banner>
-      <Form registeredEmployee={employee => addNewEmployee(employee)}/>
+      <Form teams={teams.map(team => team.nome)} registeredEmployee={employee => addNewEmployee(employee)}/>
       {teams.map(team => <Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}/>)}
     </div>
   );
