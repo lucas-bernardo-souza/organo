@@ -1,3 +1,4 @@
+import CardEmployee from '../CardEmployee';
 import './Team.css';
 
 const  Team = (props) => {
@@ -7,7 +8,9 @@ const  Team = (props) => {
     return(
         <section className='team' style={cssBackground}>
             <h3 style={cssBorder}>{props.nome}</h3>
+            <CardEmployee/>
         </section>
+        
     )
 }
 
