@@ -55,7 +55,13 @@ function App() {
     <div className="App">
       <Banner></Banner>
       <Form teams={teams.map(team => team.nome)} registeredEmployee={employee => addNewEmployee(employee)}/>
-      {teams.map(team => <Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}/>)}
+      {teams.map(team => <Team 
+        key={team.nome} 
+        nome={team.nome} 
+        corPrimaria={team.corPrimaria} 
+        corSecundaria={team.corSecundaria}
+        employees={employees.filter(employe => employe.time === team.nome)}
+      />)}
     </div>
   );
 }

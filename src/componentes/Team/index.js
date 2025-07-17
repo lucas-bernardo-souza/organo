@@ -8,7 +8,10 @@ const  Team = (props) => {
     return(
         <section className='team' style={cssBackground}>
             <h3 style={cssBorder}>{props.nome}</h3>
-            <CardEmployee/>
+            <div className='employees'>
+                {props.employees.map(employee => <CardEmployee nome={employee.nome} cargo={employee.cargo} imagem={employee.imagem}/>)}
+            </div>
+            
         </section>
         
     )
